@@ -8,12 +8,12 @@ Last Modified: 17/08/2017
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCcb3bzfYhoZyytxk69dLXdGf8FD-IqVic",
-    authDomain: "orienteering-a0c63.firebaseapp.com",
-    databaseURL: "https://orienteering-a0c63.firebaseio.com",
-    projectId: "orienteering-a0c63",
-    storageBucket: "orienteering-a0c63.appspot.com",
-    messagingSenderId: "570574227287"
+    apiKey: "AIzaSyCqiyQ7B8ET_rvuHC0zANuZG2qdWCUzjeU",
+    authDomain: "myauth-9dfe6.firebaseapp.com",
+    databaseURL: "https://myauth-9dfe6.firebaseio.com",
+    projectId: "myauth-9dfe6",
+    storageBucket: "myauth-9dfe6.appspot.com",
+    messagingSenderId: "476299764335"
   };
 firebase.initializeApp(config);
 
