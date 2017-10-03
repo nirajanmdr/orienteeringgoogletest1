@@ -36,10 +36,7 @@
     	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js">
-	  // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
+	
 
 	  </script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
@@ -134,7 +131,12 @@
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js">
+	   // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+	  </script>
     <script>
         $.backstretch("assets/img/login-bg.jpg", {speed: 500});
     </script>
