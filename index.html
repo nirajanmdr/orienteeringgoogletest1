@@ -35,7 +35,13 @@
 
     	<script src="https://apis.google.com/js/platform.js" async defer></script>
 
-<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js">
+	  // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+
+	  </script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
   
 
