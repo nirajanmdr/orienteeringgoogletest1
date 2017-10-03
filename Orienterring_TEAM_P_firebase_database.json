@@ -1,0 +1,106 @@
+{
+  "users": {
+    "user_1": {
+      "firstName": "John",
+      "lastName": "Smith",
+      "dob": "01/01/1999",
+      "phone": "0431234567"
+    },
+    "sIZkUy1URcW4aYzMwf66cQxbY8J3" : {
+      "dob" : "1996-11-29",
+      "firstName" : "Hiruna",
+      "lastName" : "Wijesinghe",
+      "phone" : "123"
+    }
+  },
+  "controlPoints": {
+    "ctrlpt_1": {
+      "qr_code": "#0001",
+      "location": "Center of the oval",
+      "points": 2
+    },
+    "ctrlpt_2": {
+      "qr_code": "#0002",
+      "location": "Corner of the shop",
+      "points": 4
+    },
+    "ctrlpt_3": {
+      "qr_code": "#0003",
+      "location": "Home base",
+      "points": 3
+    }
+  },
+  "courses": {
+    "course_1": {
+      "name": "Another line course",
+      "type": "line",
+      "location": "Garden Hall",
+      "date": "01/08/2017",
+      "startTime": "01:45 PM",
+      "endTime": "02:45 PM",
+      "numberOfCtrlpts": 3,
+      "ctrlpts": {"ctrlpt_3": true, "ctrlpt_1": true, "ctrlpt_2": true},
+      "ctrlptOrder": "ctrlpt_3, ctrlpt_1, ctrlpt_2",
+      "participants": {"user_1":true, "user_2":true}
+    },
+    "course_2": {
+      "name": "Another scatter course",
+      "type": "scatter",
+      "location": "Donald Trump Building",
+      "date": "01/08/2017",
+      "startTime": "02:35 PM",
+      "endTime": "03:35 PM",
+      "numberOfCtrlpts": 2,
+      "ctrlpts": {"ctrlpt_1": true, "ctrlpt_2": true},
+      "participants": {"user_1":true, "user_2":true}
+    },
+    "course_3": {
+      "name": "Another score course",
+      "type": "score",
+      "subType": "walking",
+      "location": "James College",
+      "date": "01/08/2017",
+      "startTime": "04:35 PM",
+      "endTime": "05:35 PM",
+      "numberOfCtrlpts": 2,
+      "timeAllocated": 60,
+      "ctrlpts": {"ctrlpt_1": true, "ctrlpt_2": true},
+      "participants": {"user_1":true, "user_2":true}
+    }
+  },
+  "events":{
+    "event_1": {
+      "name": "easy one",
+      "courses": {"course_1": true}
+    }
+  },
+  "results": {
+    "result_1": {
+      "user": "user_1",
+      "course": "course_1",
+      "scans":{"ctrlpt_1": 10, "ctrlpt_2": 5, "ctrlpt_3": 11},
+      "totalTime": 26
+    },
+    "result_2": {
+      "user": "user_2",
+      "course": "course_3",
+      "scans":{"ctrlpt_1": 14, "ctrlpt_2": 2, "ctrlpt_3": 12},
+      "totalTime": 28
+    }
+  },
+  "groups": {
+    "group_1": {
+      "user_1": true,
+      "user_3": true
+    }
+  },
+  "admins": {
+    "user_1": true,
+    "sIZkUy1URcW4aYzMwf66cQxbY8J3" : "true"
+  },
+  "superUser": {
+    "user_1": true
+  }
+
+
+}
