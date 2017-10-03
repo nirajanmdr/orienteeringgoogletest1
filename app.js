@@ -26,6 +26,22 @@ firebase.initializeApp(config);
   //store signed in user
   var currentUser = null;
 
+ //Handle Google Login
+    var uiConfig = {
+        signInSuccessUrl: 'dashboard.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID//,
+          
+          //firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
 
     //sign up form
 
@@ -49,43 +65,9 @@ firebase.initializeApp(config);
     const btnLogOut = document.getElementById('btnLogOut');
     var userName = document.getElementById('userName');
 
-    //Handle Google Login
-    var uiConfig = {
-        signInSuccessUrl: 'dashboard.html',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID//,
-          
-          //firebase.auth.EmailAuthProvider.PROVIDER_ID
-        ],
-        // Terms of service url.
-        tosUrl: '<your-tos-url>'
-      };
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
-
+   
     //Handle click event for login button
-    if(googleLogin!=null){
-      // FirebaseUI config.
-        alert('Hello');
-      var uiConfig = {
-        signInSuccessUrl: 'dashboard.html',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID//,
-          
-          //firebase.auth.EmailAuthProvider.PROVIDER_ID
-        ],
-        // Terms of service url.
-        tosUrl: '<your-tos-url>'
-      };
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
-    }
+   
 
     if(btnLogin!=null){
       btnLogin.addEventListener('click', e => {
